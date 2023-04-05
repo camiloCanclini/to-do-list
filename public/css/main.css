@@ -4,8 +4,28 @@ body{
     background: linear-gradient(to right, #FFC837, #FF8008); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     
 }
+#logo_page{
+    color: #FFC837;
+    *background-color: black;
+    width: 30px;
+    height: 30px;
+    padding: .2em;
+    text-align: center;
+    border-radius: 100%;
+    margin: 0;
+}
 main{
     min-height: 100vh;
+}
+.new_task{
+    color: #000;
+}
+.task{
+    font-size: 1.2rem;
+    color: #FFF;
+    margin: 1em;
+    flex-basis: 450px;
+    flex-grow: 1;
 }
 footer{
     font-size: 1em;

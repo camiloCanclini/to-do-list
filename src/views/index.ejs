@@ -18,29 +18,98 @@
     <nav class="navbar bg-dark" data-bs-theme="dark">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">
-            <img src="/docs/5.3/assets/brand/bootstrap-logo.svg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
-            <span>
+            <i class="fa-solid fa-clipboard-list fs-2 me-3" id="logo_page"></i>
+            <span class="fs-2">
                 To Do List 
             </span>
           </a>
         </div>
       </nav>
-      <main>
-
+      <main class="m-2 p-2 d-flex justify-content-start align-items-center flex-column">
+        <div class="new_task bg-dark rounded-4 w-50 p-4 py-5 row gap-3 justify-content-center" data-bs-theme="dark">
+            <div class="row gap-3">
+                <input type="text" class="form-control col text-dark" placeholder="Task title">
+                <input type="text" class="form-control col text-dark" placeholder="Task description">
+            </div>
+            <div class="row">
+                <textarea class="col form-control text-dark" name="content" placeholder="Task Content..."></textarea>
+            </div>
+            <div class="row">
+                <button type="submit" class="btn btn-success w-25"><i class="fa-solid fa-plus"></i></button>
+            </div>
+        </div>
+        <div class="container d-flex flex-wrap">
+            <div class="task bg-dark rounded-4 p-2 py-5 row gap-3 justify-content-center mt-4" data-bs-theme="dark">
+                <div class="row gap-3">
+                    <span type="text" class="row" placeholder="Task title">Title Task</span>
+                    <span type="text" class="row" placeholder="Task description">Title Description</span>
+                </div>
+                <div class="row">
+                    <p class="rounded col bg-white text-black p-4" name="content" placeholder="Task Content...">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias accusamus ullam quod, vel sequi pariatur dolore dicta hic totam velit? Iste tenetur saepe nisi voluptatem ad dignissimos esse ut distinctio reiciendis quasi
+                    </p>
+                </div>
+                <div class="row gap-2">
+                    <a class="btn btn-success col-1" href="#"><i class="fa-solid fa-check"></i></a>
+                    <a class="btn btn-danger col-1" href="#"><i class="fa-solid fa-xmark"></i></a>
+                </div>
+            </div>
+            <div class="task bg-dark rounded-4 p-4 py-5 row gap-3 justify-content-center mt-4" data-bs-theme="dark">
+                <div class="row gap-3">
+                    <span type="text" class="row" placeholder="Task title">Title Task</span>
+                    <span type="text" class="row" placeholder="Task description">Title Description</span>
+                </div>
+                <div class="row">
+                    <p class="rounded col bg-white text-black p-4" name="content" placeholder="Task Content...">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias accusamus ullam quod, vel sequi pariatur dolore dicta hic totam velit? Iste tenetur saepe nisi voluptatem ad dignissimos esse ut distinctio reiciendis quasi
+                    </p>
+                </div>
+                <div class="row gap-2">
+                    <a class="btn btn-success col-1" href="#"><i class="fa-solid fa-check"></i></a>
+                    <a class="btn btn-danger col-1" href="#"><i class="fa-solid fa-xmark"></i></a>
+                </div>
+            </div>
+            <div class="task bg-dark rounded-4 p-4 py-5 row gap-3 justify-content-center mt-4" data-bs-theme="dark">
+                <div class="row gap-3">
+                    <span type="text" class="row" placeholder="Task title">Title Task</span>
+                    <span type="text" class="row" placeholder="Task description">Title Description</span>
+                </div>
+                <div class="row">
+                    <p class="rounded col bg-white text-black p-4" name="content" placeholder="Task Content...">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias accusamus ullam quod, vel sequi pariatur dolore dicta hic totam velit? Iste tenetur saepe nisi voluptatem ad dignissimos esse ut distinctio reiciendis quasi
+                    </p>
+                </div>
+                <div class="row gap-2">
+                    <a class="btn btn-success col-1" href="#"><i class="fa-solid fa-check"></i></a>
+                    <a class="btn btn-danger col-1" href="#"><i class="fa-solid fa-xmark"></i></a>
+                </div>
+            </div>
+            <div class="task bg-dark rounded-4 p-4 py-5 row gap-3 justify-content-center mt-4" data-bs-theme="dark">
+                <div class="row gap-3">
+                    <span type="text" class="row" placeholder="Task title">Title Task</span>
+                    <span type="text" class="row" placeholder="Task description">Title Description</span>
+                </div>
+                <div class="row">
+                    <p class="rounded col bg-white text-black p-4" name="content" placeholder="Task Content...">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias accusamus ullam quod, vel sequi pariatur dolore dicta hic totam velit? Iste tenetur saepe nisi voluptatem ad dignissimos esse ut distinctio reiciendis quasi
+                    </p>
+                </div>
+                <div class="row gap-2">
+                    <a class="btn btn-success col-1" href="#"><i class="fa-solid fa-check"></i></a>
+                    <a class="btn btn-danger col-1" href="#"><i class="fa-solid fa-xmark"></i></a>
+                </div>
+            </div>
+        </div>
       </main>
 </body>
 <footer class="container-fluid bg-dark text-white">
     <div class="row align-items-center p-2">
         <div class="col-3 social-medias">
-            <div class=" d-flex justify-content-between align-items-center">
+            <div class=" d-flex justify-content-start align-items-center">
                 <i class="fa-brands fa-square-github me-2"></i>
                 <a class="text-decoration-none link-light" href="http://https://github.com/camiloCanclini?tab=repositories">GitHub Account</a>
             </div>
-            <div class=" d-flex justify-content-between align-items-center">
+            <div class=" d-flex justify-content-start align-items-center">
                 <i class="fa-brands fa-linkedin me-2"></i>
                 <a class="text-decoration-none link-light" href="https://www.linkedin.com/in/camilo-canclini-635110220/">LinkedIn Account</a>
             </div>
-            <div class=" d-flex justify-content-between align-items-center">
+            <div class=" d-flex justify-content-start align-items-center">
                 <i class="fa-solid fa-address-card me-2"></i>
                 <a class="text-decoration-none link-light" href="https://camilocanclini.github.io/camilo_canclini_portfolio/">Portfolio Page</a>
             </div>
@@ -51,16 +120,16 @@
             </span>
         </div>
         <div class="col-3">
-            <div class=" d-flex justify-content-between align-items-center p-1">
-                <span>Bootstrap</span>
+            <div class=" d-flex justify-content-end align-items-center p-1">
+                <span class="me-2">Bootstrap</span>
                 <img src="./imgs/bootstrap.png" alt="bootstrap-logo" height="25">
             </div>
-            <div class=" d-flex justify-content-between align-items-center p-1">
-                <span>Node</span>
+            <div class=" d-flex justify-content-end align-items-center p-1">
+                <span class="me-2">Node</span>
                 <img src="./imgs/node.png" alt="" height="25">
             </div>
-            <div class=" d-flex justify-content-between align-items-center p-1">
-                <span>Mongo</span>
+            <div class=" d-flex justify-content-end align-items-center p-1">
+                <span class="me-2">Mongo</span>
                 <img src="./imgs/mongo.svg" alt="" height="25">
             </div>
         </div>
