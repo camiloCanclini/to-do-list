@@ -25,76 +25,18 @@
           </a>
         </div>
       </nav>
-      <main class="m-2 p-2 d-flex justify-content-start align-items-center flex-column">
-        <div class="new_task bg-dark rounded-4 w-50 p-4 py-5 row gap-3 justify-content-center" data-bs-theme="dark">
-            <div class="row gap-3">
-                <input type="text" class="form-control col text-dark" placeholder="Task title">
-                <input type="text" class="form-control col text-dark" placeholder="Task description">
-            </div>
-            <div class="row">
-                <textarea class="col form-control text-dark" name="content" placeholder="Task Content..."></textarea>
-            </div>
-            <div class="row">
-                <button type="submit" class="btn btn-success w-25"><i class="fa-solid fa-plus"></i></button>
-            </div>
+      <main class="container-fluid">
+        <div class="new_task bg-dark rounded-4 mt-4" data-bs-theme="dark">
+            <form action="/newTask" method="POST" class="p-3 px-5">
+                <input type="text" name="title" class="" placeholder="Task title">
+                <textarea type="text" class="" name="content" placeholder="Task Content..."></textarea>
+                <button type="submit" class="btn btn-success"><i class="fa-solid fa-plus"></i></button>
+            </form>
         </div>
-        <div class="container d-flex flex-wrap">
-            <div class="task bg-dark rounded-4 p-2 py-5 row gap-3 justify-content-center mt-4" data-bs-theme="dark">
-                <div class="row gap-3">
-                    <span type="text" class="row" placeholder="Task title">Title Task</span>
-                    <span type="text" class="row" placeholder="Task description">Title Description</span>
-                </div>
-                <div class="row">
-                    <p class="rounded col bg-white text-black p-4" name="content" placeholder="Task Content...">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias accusamus ullam quod, vel sequi pariatur dolore dicta hic totam velit? Iste tenetur saepe nisi voluptatem ad dignissimos esse ut distinctio reiciendis quasi
-                    </p>
-                </div>
-                <div class="row gap-2">
-                    <a class="btn btn-success col-1" href="#"><i class="fa-solid fa-check"></i></a>
-                    <a class="btn btn-danger col-1" href="#"><i class="fa-solid fa-xmark"></i></a>
-                </div>
-            </div>
-            <div class="task bg-dark rounded-4 p-4 py-5 row gap-3 justify-content-center mt-4" data-bs-theme="dark">
-                <div class="row gap-3">
-                    <span type="text" class="row" placeholder="Task title">Title Task</span>
-                    <span type="text" class="row" placeholder="Task description">Title Description</span>
-                </div>
-                <div class="row">
-                    <p class="rounded col bg-white text-black p-4" name="content" placeholder="Task Content...">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias accusamus ullam quod, vel sequi pariatur dolore dicta hic totam velit? Iste tenetur saepe nisi voluptatem ad dignissimos esse ut distinctio reiciendis quasi
-                    </p>
-                </div>
-                <div class="row gap-2">
-                    <a class="btn btn-success col-1" href="#"><i class="fa-solid fa-check"></i></a>
-                    <a class="btn btn-danger col-1" href="#"><i class="fa-solid fa-xmark"></i></a>
-                </div>
-            </div>
-            <div class="task bg-dark rounded-4 p-4 py-5 row gap-3 justify-content-center mt-4" data-bs-theme="dark">
-                <div class="row gap-3">
-                    <span type="text" class="row" placeholder="Task title">Title Task</span>
-                    <span type="text" class="row" placeholder="Task description">Title Description</span>
-                </div>
-                <div class="row">
-                    <p class="rounded col bg-white text-black p-4" name="content" placeholder="Task Content...">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias accusamus ullam quod, vel sequi pariatur dolore dicta hic totam velit? Iste tenetur saepe nisi voluptatem ad dignissimos esse ut distinctio reiciendis quasi
-                    </p>
-                </div>
-                <div class="row gap-2">
-                    <a class="btn btn-success col-1" href="#"><i class="fa-solid fa-check"></i></a>
-                    <a class="btn btn-danger col-1" href="#"><i class="fa-solid fa-xmark"></i></a>
-                </div>
-            </div>
-            <div class="task bg-dark rounded-4 p-4 py-5 row gap-3 justify-content-center mt-4" data-bs-theme="dark">
-                <div class="row gap-3">
-                    <span type="text" class="row" placeholder="Task title">Title Task</span>
-                    <span type="text" class="row" placeholder="Task description">Title Description</span>
-                </div>
-                <div class="row">
-                    <p class="rounded col bg-white text-black p-4" name="content" placeholder="Task Content...">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias accusamus ullam quod, vel sequi pariatur dolore dicta hic totam velit? Iste tenetur saepe nisi voluptatem ad dignissimos esse ut distinctio reiciendis quasi
-                    </p>
-                </div>
-                <div class="row gap-2">
-                    <a class="btn btn-success col-1" href="#"><i class="fa-solid fa-check"></i></a>
-                    <a class="btn btn-danger col-1" href="#"><i class="fa-solid fa-xmark"></i></a>
-                </div>
-            </div>
+        <div class="container-fluid tasks_container">
+            <% tasks.forEach(task => { %>
+                <%- include('./partials/task',{title: task.title, content: task.content}) %>
+            <% }) %> 
         </div>
       </main>
 </body>
