@@ -21,9 +21,9 @@ router.post('/newTask', async (req, res)=>{
             console.log('Task Saved!')
             res.status(200)
             res.redirect('/')
-        })
+        })  
         .catch((err)=>{
-            console.log('Error Creating New Task!')
+            console.log('Error Creating New Task!',err)
             res.status(500)
             res.render('500')
         })

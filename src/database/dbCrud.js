@@ -2,7 +2,7 @@ const taskModel = require('./models/Task');
 
 async function createTask(title, content) {
    const task = new taskModel({title: title, content: content})
-   return await task.save();
+   return task.save();
 }
 async function getTasks() {
    return await taskModel.find();
@@ -38,10 +38,10 @@ createTask()
     .then(()=>console.log('New Task Saved!'))
     .catch(err=>console.log('Error Saving Task!'))
  */
-updateTask("6433604f6e913f6cfe2b602d", "My Second Taskkkkk", "Here is the New Content!!!")
+/* updateTask("6433604f6e913f6cfe2b602d", "My Second Taskkkkk", "Here is the New Content!!!")
     .then((tasks)=>console.log('Task Updated!'))
     .catch(err=>console.log('Error Finding Tasks!', err))
-
+ */
 module.exports = {
    createTask,
    getTasks
