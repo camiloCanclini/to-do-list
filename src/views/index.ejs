@@ -34,9 +34,13 @@
             </form>
         </div>
         <div class="container-fluid tasks_container">
-            <% tasks.forEach(task => { %>
-                <%- include('./partials/task',{title: task.title, content: task.content, id: task._id}) %>
-            <% }) %> 
+            <% if (tasks) { %>
+                <% tasks.forEach(task => { %>
+                    <%- include('./partials/task',{title: task.title, content: task.content, id: task._id}) %>
+                <% }) %> 
+            <% } else {%>
+                <p class="fs-1">No Tasks  Loaded</p>
+            <% } %>
         </div>
       </main>
       <footer class="container-fluid bg-dark text-white">
