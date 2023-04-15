@@ -1,10 +1,17 @@
-<div class="task bg-dark" data-bs-theme="dark">
+<div class="task bg-dark" data-bs-theme="dark" data-id="<%= id %>">
     <span class="task_title" class=""><%= title %></span>
     <p class="task_content">
         <%= content %>
     </p>
-    <div>
-        <a class="btn btn-success" href="#"><i class="fa-solid fa-check"></i></a>
-        <a class="btn btn-danger" href="#"><i class="fa-solid fa-xmark"></i></a>
+    <div class="task_options d-flex align-items-center justify-content-between">
+        <div>
+            <button class="btn mx-1 fs-4 p-0 "><i class="fa-solid fa-check text-success"></i></button>
+            <button class="btn mx-1 fs-4"><i class="fa-solid fa-xmark text-danger"></i></button>
+        </div>
+        <div>
+            <button class="btn mx-1 btn-warning editButton"><i class="fa fa-pen" aria-hidden="true"></i></button>
+            <button class="btn mx-1 btn-danger deleteButton"><i class="fa fa-trash" aria-hidden="true"></i></button>
+        </div>
     </div>
+    <button class="btn mx-1 btn-warning confirmEditButton" hidden><i class="fa-solid fa-square-check"></i></button>
 </div>

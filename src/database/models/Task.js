@@ -1,6 +1,6 @@
-const db = require('../databaseConfig');
+const {Schema, model} = require( 'mongoose' )
 
-const taskSchema = new db.Schema({
+const taskSchema = new Schema({
     title: {
         type:String,
         required: true
@@ -8,7 +8,13 @@ const taskSchema = new db.Schema({
     content: {
         type:String,
         required: true
+    },
+    state: {
+        type: String,
+        required: true,
+        default: 'pending',
+        enum: ['pending', 'done', 'failed']
     }
 })
 
-module.exports = db.model('Task', taskSchema);
+module.exports = model('Task', taskSchema);

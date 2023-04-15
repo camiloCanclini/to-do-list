@@ -72,7 +72,9 @@ main{
     border-radius: .4em;
     padding: 1em;
     flex-grow: 1;
+   
 }
+
 
 /* width */
 .task ::-webkit-scrollbar {

@@ -27,7 +27,7 @@
       </nav>
       <main class="container-fluid">
         <div class="new_task bg-dark rounded-4 mt-4" data-bs-theme="dark">
-            <form action="/newTask" method="POST" class="p-3 px-5">
+            <form action="/tasks/create" method="POST" class="p-3 px-3">
                 <input type="text" name="title" class="" placeholder="Task title">
                 <textarea type="text" class="" name="content" placeholder="Task Content..."></textarea>
                 <button type="submit" class="btn btn-success"><i class="fa-solid fa-plus"></i></button>
@@ -35,48 +35,51 @@
         </div>
         <div class="container-fluid tasks_container">
             <% tasks.forEach(task => { %>
-                <%- include('./partials/task',{title: task.title, content: task.content}) %>
+                <%- include('./partials/task',{title: task.title, content: task.content, id: task._id}) %>
             <% }) %> 
         </div>
       </main>
+      <footer class="container-fluid bg-dark text-white">
+          <div class="row align-items-center p-2">
+              <div class="col-3 social-medias">
+                  <div class=" d-flex justify-content-start align-items-center">
+                      <i class="fa-brands fa-square-github me-2"></i>
+                      <a class="text-decoration-none link-light" href="http://https://github.com/camiloCanclini?tab=repositories">GitHub Account</a>
+                  </div>
+                  <div class=" d-flex justify-content-start align-items-center">
+                      <i class="fa-brands fa-linkedin me-2"></i>
+                      <a class="text-decoration-none link-light" href="https://www.linkedin.com/in/camilo-canclini-635110220/">LinkedIn Account</a>
+                  </div>
+                  <div class=" d-flex justify-content-start align-items-center">
+                      <i class="fa-solid fa-address-card me-2"></i>
+                      <a class="text-decoration-none link-light" href="https://camilocanclini.github.io/camilo_canclini_portfolio/">Portfolio Page</a>
+                  </div>
+              </div>
+              <div class="col justify-content-center text-center">
+                  <span>
+                      This Web Application Was Made by Camilo Canclini
+                  </span>
+              </div>
+              <div class="col-3">
+                  <div class=" d-flex justify-content-end align-items-center p-1">
+                      <span class="me-2">Bootstrap</span>
+                      <img src="./imgs/bootstrap.png" alt="bootstrap-logo" height="25">
+                  </div>
+                  <div class=" d-flex justify-content-end align-items-center p-1">
+                      <span class="me-2">Node</span>
+                      <img src="./imgs/node.png" alt="" height="25">
+                  </div>
+                  <div class=" d-flex justify-content-end align-items-center p-1">
+                      <span class="me-2">Mongo</span>
+                      <img src="./imgs/mongo.svg" alt="" height="25">
+                  </div>
+              </div>
+          </div>
+      </footer>
+      <script src="https://kit.fontawesome.com/b039591234.js" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+      <script src="./js/editTask.js"></script>
+      <script src="./js/deleteTask.js"></script>
 </body>
-<footer class="container-fluid bg-dark text-white">
-    <div class="row align-items-center p-2">
-        <div class="col-3 social-medias">
-            <div class=" d-flex justify-content-start align-items-center">
-                <i class="fa-brands fa-square-github me-2"></i>
-                <a class="text-decoration-none link-light" href="http://https://github.com/camiloCanclini?tab=repositories">GitHub Account</a>
-            </div>
-            <div class=" d-flex justify-content-start align-items-center">
-                <i class="fa-brands fa-linkedin me-2"></i>
-                <a class="text-decoration-none link-light" href="https://www.linkedin.com/in/camilo-canclini-635110220/">LinkedIn Account</a>
-            </div>
-            <div class=" d-flex justify-content-start align-items-center">
-                <i class="fa-solid fa-address-card me-2"></i>
-                <a class="text-decoration-none link-light" href="https://camilocanclini.github.io/camilo_canclini_portfolio/">Portfolio Page</a>
-            </div>
-        </div>
-        <div class="col justify-content-center text-center">
-            <span>
-                This Web Application Was Made by Camilo Canclini
-            </span>
-        </div>
-        <div class="col-3">
-            <div class=" d-flex justify-content-end align-items-center p-1">
-                <span class="me-2">Bootstrap</span>
-                <img src="./imgs/bootstrap.png" alt="bootstrap-logo" height="25">
-            </div>
-            <div class=" d-flex justify-content-end align-items-center p-1">
-                <span class="me-2">Node</span>
-                <img src="./imgs/node.png" alt="" height="25">
-            </div>
-            <div class=" d-flex justify-content-end align-items-center p-1">
-                <span class="me-2">Mongo</span>
-                <img src="./imgs/mongo.svg" alt="" height="25">
-            </div>
-        </div>
-    </div>
-</footer>
-<script src="https://kit.fontawesome.com/b039591234.js" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </html>
