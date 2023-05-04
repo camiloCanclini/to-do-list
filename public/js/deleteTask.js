@@ -25,7 +25,7 @@ deleteButtons.forEach(button => {
                 },
                 body: body
                 
-            })
+              })
               .then(response => {
                 if (response.status == 200) {
                     Swal.fire({

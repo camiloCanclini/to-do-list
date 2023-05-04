@@ -1,8 +1,6 @@
 const router = require('express').Router()
 const dbIsConnected = require('../controllers/middlewares/dbIsConnected')
 
-const { render } = require('ejs')
-
 const db = require('../database/dbCrud')
 
 router.get('/', dbIsConnected, async (req,res)=>{

@@ -67,7 +67,18 @@ main{
     flex-direction: column;
     transition: 1s all ease-in-out;
 }
-.task > .task_content{
+.task > .task_info{
+    flex-grow: 1;
+}
+.task > .task_info > .task_inputs{
+    flex-grow: 1;
+}
+.task > .task_info > .task_inputs > *{
+    margin-top: 1em;
+    border-radius: .4em;
+    border-style: none;
+}
+.task > div > .task_content{
     background-color: #0002;
     border-radius: .4em;
     padding: 1em;

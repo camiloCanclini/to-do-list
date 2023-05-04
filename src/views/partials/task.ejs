@@ -1,8 +1,15 @@
 <div class="task bg-dark" data-bs-theme="dark" data-id="<%= id %>">
-    <span class="task_title" class=""><%= title %></span>
-    <p class="task_content">
-        <%= content %>
-    </p>
+    <div class="task_info">
+        <span class="task_title" class=""><%= title %></span>
+        <p class="task_content">
+            <%= content %>
+        </p>
+        <!-- This Div will show when the task is being edit-->
+        <div class="task_inputs w-100" hidden>
+            <input type="text" value="">
+            <textarea class="w-100" rows="3" value=""></textarea>
+        </div>
+    </div>
     <div class="task_options d-flex align-items-center justify-content-between">
         <div>
             <button class="btn mx-1 fs-4 p-0 "><i class="fa-solid fa-check text-success"></i></button>
@@ -13,5 +20,6 @@
             <button class="btn mx-1 btn-danger deleteButton"><i class="fa fa-trash" aria-hidden="true"></i></button>
         </div>
     </div>
-    <button class="btn mx-1 btn-warning confirmEditButton" hidden><i class="fa-solid fa-square-check"></i></button>
+    <!-- This Button will show when the task is being edit-->
+    <button class="btn mx-1 btn-warning confirmEditButton" hidden=""><i class="fa-solid fa-square-check"></i></button>
 </div>
