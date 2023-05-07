@@ -1,0 +1,23 @@
+.state_task{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    top: -20px;
+    right: -20px;
+    font-size: 2em;
+    opacity: 0;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.15);
+    color: white;
+}
+.task[data-state="done"] .state_task{
+    background-color: rgb(29, 150, 55);
+    opacity: 1;
+}
+.task[data-state="failed"] .state_task{
+    background-color: rgb(196, 52, 52);
+    opacity: 1;
+}

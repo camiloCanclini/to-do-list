@@ -142,3 +142,6 @@ dist
 .svelte-kit
 
 # End of https://www.toptal.com/developers/gitignore/api/node
+.idea/modules.xml
+.idea/to-do-list.iml
+.idea/vcs.xml

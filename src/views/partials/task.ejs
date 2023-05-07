@@ -1,4 +1,9 @@
-<div class="task bg-dark" data-bs-theme="dark" data-id="<%= id %>">
+<div class="task bg-dark" data-bs-theme="dark" data-id="<%= id %>" data-state="<%= state %>">
+    <% if (state == "done") { %>
+        <i class="state_task fa-solid fa-check" ></i>
+    <% } else{ %>
+        <i class="state_task fa-solid fa-xmark" ></i>
+    <% } %>
     <div class="task_info">
         <span class="task_title" class=""><%= title %></span>
         <p class="task_content">
@@ -22,4 +27,5 @@
     </div>
     <!-- This Button will show when the task is being edit-->
     <button class="btn mx-1 btn-warning confirmEditButton" hidden=""><i class="fa-solid fa-square-check"></i></button>
+    <button class="btn mx-1 btn-warning undo_btn" hidden=""><i class="mx-auto fa-solid fa-reply"></i></button>
 </div>

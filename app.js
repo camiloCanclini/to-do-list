@@ -20,6 +20,12 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // Setting Routers
 app.use(router)
 
+app.use((req, res) => {
+    res.status(404);
+    res.render('404');
+    return;
+})
+
 
 // Setting Database Connection
 connectionWithDatabase()

@@ -1,0 +1,13 @@
+.bg1{
+    background-color: #FF8008;  /* fallback for old browsers */
+    background-color: -webkit-linear-gradient(to right, #FFC837, #FF8008);  /* Chrome 10-25, Safari 5.1-6 */
+    background-color: linear-gradient(to right, #FFC837, #FF8008); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    width: 100px;
+    height: 100px;
+    color: #FF8008;
+}
+.bg2{
+    background-color: #00B4DB;  /* fallback for old browsers */
+    background-color: -webkit-linear-gradient(to right, #0083B0, #00B4DB);  /* Chrome 10-25, Safari 5.1-6 */
+    background-color: linear-gradient(to right, #0083B0, #00B4DB); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}

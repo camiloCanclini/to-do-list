@@ -23,7 +23,7 @@ main{
 }
 .new_task{
     color: #000;
-    width: 30vw;
+    *width: 35vw;
 }
 .new_task > form > * {
     height: 3em;
@@ -55,8 +55,9 @@ main{
     justify-content: center;
 }
 .task{
+    position: relative;
     box-sizing: border-box;
-    padding: 1.4em;
+    padding: 1.4em 2em;
     margin: 1.6em;
     flex-grow: 1;   
     flex-basis: 300px;
