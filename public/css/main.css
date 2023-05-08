@@ -76,6 +76,24 @@ main{
 .task > .task_info > * {
     flex-basis: 0;
 }
+.task > .task_options > .state_btns > *{
+    width: 2em;
+    height: 2em;
+}
+.task > .task_options > .state_btns > *:nth-child(1){
+    color: #2d9b02;
+}
+.task > .task_options > .state_btns > *:nth-child(2){
+    color: #c71a1a;
+}
+.task > .task_options > .state_btns > *:nth-child(1):hover{
+    background-color: #2d9b02;
+    color: #fff;
+}
+.task > .task_options > .state_btns > *:nth-child(2):hover{
+    background-color: rgb(205, 50, 50);
+    color: #fff;
+}
 .task > .task_info > .task_inputs{
     flex-grow: 1;
     display: flex;

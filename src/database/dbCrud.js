@@ -19,7 +19,15 @@ async function deleteTask(id) {
    }
    return taskModel.findByIdAndDelete({_id: id});
 }
-async function updateTask(id, newTitle, newContent) {
+async function updateTask(requestObj) {
+
+   const id = requestObj.id;
+   const newTitle = requestObj.title;
+   const newContent = requestObj.content;
+   const newState = requestObj.state;
+
+   console.log(id);
+   
    if (typeof id === 'undefined'|| id == null) {
       throw new Error('updateTask Needs an id Arg!')
    }
@@ -32,6 +40,9 @@ async function updateTask(id, newTitle, newContent) {
    }
    if (!(typeof newContent === 'undefined'|| newContent == null)) {
       updateQuery.content = newContent // Saving a new attribute based on the arg passed
+   }
+   if (!(typeof newState === 'undefined'|| newState == null )) {
+      updateQuery.state = newState // Saving a new attribute based on the arg passed
    }
 
    console.log(updateQuery);

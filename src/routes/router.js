@@ -33,13 +33,14 @@ router.post('/tasks/create', async (req, res)=>{
 })
 router.post('/tasks/update', async (req, res)=>{
     console.log(req.body);
-    await db.updateTask(req.body.id, req.body.title, req.body.content)
+    await db.updateTask(req.body)
     .then(()=>{
         console.log('Task Updated Successfully!')
         res.status(200)
         res.redirect('/')
     })
     .catch((err)=>{
+        console.log(err.message);
         console.log('Error Updating Task!')
         res.status(500)
         res.render('500')
